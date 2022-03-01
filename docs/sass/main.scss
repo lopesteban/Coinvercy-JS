@@ -1,3 +1,9 @@
+@forward "../sass/base/reset";
+
 @forward "../sass/layout/body";
 @forward "../sass/layout/header";
 @forward "../sass/layout/sections";
+@forward "../sass/layout/footer";
+@forward "../sass/layout/navbar";
+
+@forward "../sass/pages/info";

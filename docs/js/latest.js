@@ -31,7 +31,6 @@ const fetchingLatest = () => {
           }
           $sectionContent.innerHTML = `<h3>Updated list of compared currencies rates to ${$from} rate</h3>`;
           $sectionContent.appendChild($fragment);
-          // $getLatest.disabled = true;
         })
         .catch((err) => {
           if (err.status === 404) {
@@ -47,7 +46,7 @@ const fetchingLatest = () => {
 export const clickingLatest = () => {
   d.addEventListener("click", (e) => {
     let target = e.target;
-    if (target === navBarLink[2]) {
+    if (target === navBarLink[2] || target.matches("#latest")) {
       e.preventDefault();
       for (let i = 0; i < navBarLink.length; i++) {
         if (i === 2) {
@@ -66,7 +65,7 @@ export const clickingLatest = () => {
       }
     }
     if (target.matches("#get-latest-v")) fetchingLatest();
-    if (target.matches("#clear")) {
+    if (target.matches("#clear-latest-dashboard")) {
       $sectionContent.innerHTML = null;
       $getLatest.disabled = false;
     }

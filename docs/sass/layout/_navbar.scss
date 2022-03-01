@@ -1,0 +1,16 @@
+@use "../themes/colours" as c;
+
+.navbar {
+  width: 70%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.3rem;
+  }
+}

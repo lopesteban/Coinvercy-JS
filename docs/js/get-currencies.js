@@ -30,8 +30,9 @@ const converting = () => {
   d.addEventListener("submit", (e) => {
     let target = e.target,
       $amount = target.amount.value,
-      $from = target.from.value.toUpperCase(),
-      $to = target.to.value.toUpperCase();
+      $from = target.from.value,
+      $to = target.to.value;
+
     if (target === $form) {
       e.preventDefault();
       fetch(
@@ -93,7 +94,7 @@ export const clickingCurrencies = () => {
       });
     }
 
-    if (target.matches("#clear")) {
+    if (target.matches("#clear-converter-dashboard")) {
       $sectionContent.innerHTML = null;
 
       $buttons.forEach((btn) => {

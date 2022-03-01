@@ -36,7 +36,7 @@ const getHistorical = () => {
         })
         .catch((err) => {
           if (err.status === 404) {
-            $sectionContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist`;
+            $sectionContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist or the requested information may not be available`;
           } else {
             $sectionContent.innerHTML = `<h3>Error ${err.status}: Oops! Something went wrong </h3>`;
           }
@@ -51,27 +51,26 @@ const getHistoricalBetween = () => {
     if (target === $formBetween) {
       e.preventDefault();
 
-      let $from = target.fromB.value.toUpperCase(),
-        $to = target.toB.value.toUpperCase(),
+      let $from = target.fromB.value,
+        $to = target.toB.value,
         $day = target.dayB.value,
         $month = target.monthB.value,
         $year = target.yearB.value;
-
       fetch(
         `https://api.frankfurter.app/${$year}-${$month}-${$day}?from=${$from}&to=${$to}`
       )
         .then((res) => (res.ok ? res.json() : Promise.reject(res)))
         .then((currencies) => {
+          $sectionContent.innerHTML = null;
           let rate = currencies.rates[$to],
             $div = d.createElement("div"),
-            $divsContent = `<p>${$day}-${$month}-${$year}: A ${$from} was equal to ${rate} ${$to}</p>`;
+            $divsContent = `<p>${$day}-${$month}-${$year}: 1 ${$from} was equal to ${rate} ${$to}</p>`;
           $div.insertAdjacentHTML("afterbegin", $divsContent);
           $sectionContent.appendChild($div);
-          $getHistoricalBetween.disabled = true;
         })
         .catch((err) => {
           if (err.status === 404) {
-            $sectionContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist`;
+            $sectionContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist or the requested information may not be available.`;
           } else {
             $sectionContent.innerHTML = `<h3>Error ${err.status}: Oops! Something went wrong </h3>`;
           }
@@ -83,6 +82,7 @@ const getHistoricalBetween = () => {
 export const clickingHistorical = () => {
   d.addEventListener("click", (e) => {
     let target = e.target;
+    let $buttons = d.querySelectorAll("button");
     if (target === navBarLink[3]) {
       e.preventDefault();
       for (let i = 0; i < navBarLink.length; i++) {
@@ -103,16 +103,14 @@ export const clickingHistorical = () => {
     }
     if (target.matches("#get-historical")) getHistorical();
     if (target.matches("#get-historical-between")) getHistoricalBetween();
-    if (target.matches("#clear")) {
+
+    if (target.matches("#clear-historical-dashboard")) {
       $sectionContent.innerHTML = null;
+      $getHistoricalBetween.disabled = false;
     }
     if (target.matches("#clear-historical-input")) {
       historicalInputs.forEach((input) => (input.value = ""));
-      d.getElementById(
-        "from-historical",
-        "from-historical-B",
-        "to-historical-B"
-      ).value = "";
+      d.getElementById("from-historical").value = "";
       d.getElementById("from-historical-B").value = "";
       d.getElementById("to-historical-B").value = "";
     }

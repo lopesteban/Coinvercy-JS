@@ -18,10 +18,45 @@
       </nav>
     </header>
     <section class="main section">
-      <h2>About us</h2>
+      <div class="info-container">
+        <h2 class="section-title">About us</h2>
+        <h3>Our currency converter</h3>
+        <p>
+          With our unique currency converter you can easily and quickly convert
+          currencies with many advantages: All foreign currencies of the world.
+          Tracks foreign exchange references rates published by the
+          <a
+            href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+            target="_blank"
+          >
+            European Central Bank</a
+          >. The data refreshes around 16:00 CET every working day. Historical
+          financial rates for any working day since 4 January 1999. Fast and
+          comfortable like a mobile app. Additional features like conversion
+          history, copy result or inverse conversion. Interactive chart. Handy
+          conversion tables directly to your mobile for holidays and business
+          trips.
+        </p>
+        <h3>Multiple currency converter</h3>
+        <p>
+          Would you like to convert an amount to multiple other currencies at
+          once? Then have a look at our unique interactive
+          <a id="latest" class="navlink" href="#">cross latest rates</a>.
+        </p>
+        <h3>Note</h3>
+        <p>
+          Our money converter (currency convertor) and other tools can assist
+          you in many situations as an additional indicator (online shopping,
+          hotel booking, foreign exchange / FOREX / FX trading, conversion of
+          stock quotes and investment products, loan comparison, checking credit
+          card statements etc.). But in any case please read our disclaimer
+          before!
+        </p>
+      </div>
     </section>
     <section class="main section hidden">
-      <h2>Currency converter</h2>
+      <h2 class="section-title">Currency converter</h2>
+
       <button id="get-currencies">See currencies</button>
       <form class="currency-form content">
         <label for="amount">Amount</label><br />
@@ -29,7 +64,7 @@
           type="text"
           id="amount"
           name="amount"
-          placeholder="Amount"
+          placeholder="00.0$"
           pattern="^[0-9]+$"
           data-converter
           required
@@ -46,7 +81,7 @@
           <option value="CNY">Chinese Renminbi Yuan</option>
           <option value="CZK">Czech Koruna</option>
           <option value="DKK">Danish Krone</option>
-          <option value="EUR">Euro</option>
+          <option value="EUR" selected>Euro</option>
           <option value="GBP">British Pound</option>
           <option value="HKD">Hong Kong Dollar</option>
           <option value="HRK">Croatian Kuna</option>
@@ -76,7 +111,9 @@
         <label for="to">To currency</label><br />
         <select name="to" id="to-converter">
           <option value="AUD">Australian Dollar</option>
-          <option value="BGN">Bulgarian Lev</option>
+          <option data-text-content="Bulgarian Lev" value="BGN">
+            Bulgarian Lev
+          </option>
           <option value="BRL">Brazilian real</option>
           <option value="CAD">Canadian Dollar</option>
           <option value="CHF">Swiss Franc</option>
@@ -106,12 +143,12 @@
           <option value="SGD">Singapore Dollar</option>
           <option value="THB">Thai Baht</option>
           <option value="TRY">Turkish Lira</option>
-          <option value="USD">United States Dollar</option>
+          <option value="USD" selected>United States Dollar</option>
           <option value="ZAR">South African Rand</option></select
         ><br />
         <input id="calculate" type="submit" value="Calculate" />
       </form>
-      <button id="clear">Clear Dashboard</button>
+      <button id="clear-converter-dashboard">Clear Dashboard</button>
       <button id="clear-converter-inputs">Clear Inputs</button>
       <section class="users-section"></section>
     </section>
@@ -120,7 +157,9 @@
       <form class="latest-form">
         <label for="from">From currency</label><br />
         <select name="from" id="from-latest">
-          <option value="AUD">Australian Dollar</option>
+          <option data-text="Australian Dollar" value="AUD">
+            Australian Dollar
+          </option>
           <option value="BGN">Bulgarian Lev</option>
           <option value="BRL">Brazilian real</option>
           <option value="CAD">Canadian Dollar</option>
@@ -128,7 +167,7 @@
           <option value="CNY">Chinese Renminbi Yuan</option>
           <option value="CZK">Czech Koruna</option>
           <option value="DKK">Danish Krone</option>
-          <option value="EUR">Euro</option>
+          <option value="EUR" selected>Euro</option>
           <option value="GBP">British Pound</option>
           <option value="HKD">Hong Kong Dollar</option>
           <option value="HRK">Croatian Kuna</option>
@@ -163,7 +202,7 @@
           value="Get latest rates"
         />
       </form>
-      <button id="clear" class="btn">Clear Dashboard</button>
+      <button id="clear-latest-dashboard" class="btn">Clear Dashboard</button>
       <button id="clear-latest-inputs">Clear Inputs</button>
       <section class="latest-section"></section>
     </section>
@@ -180,7 +219,7 @@
           <option value="CNY">Chinese Renminbi Yuan</option>
           <option value="CZK">Czech Koruna</option>
           <option value="DKK">Danish Krone</option>
-          <option value="EUR">Euro</option>
+          <option value="EUR" selected>Euro</option>
           <option value="GBP">British Pound</option>
           <option value="HKD">Hong Kong Dollar</option>
           <option value="HRK">Croatian Kuna</option>
@@ -255,7 +294,7 @@
           <option value="CNY">Chinese Renminbi Yuan</option>
           <option value="CZK">Czech Koruna</option>
           <option value="DKK">Danish Krone</option>
-          <option value="EUR">Euro</option>
+          <option value="EUR" selected>Euro</option>
           <option value="GBP">British Pound</option>
           <option value="HKD">Hong Kong Dollar</option>
           <option value="HRK">Croatian Kuna</option>
@@ -315,7 +354,7 @@
           <option value="SGD">Singapore Dollar</option>
           <option value="THB">Thai Baht</option>
           <option value="TRY">Turkish Lira</option>
-          <option value="USD">United States Dollar</option>
+          <option value="USD" selected>United States Dollar</option>
           <option value="ZAR">South African Rand</option>
         </select>
         <br />
@@ -354,10 +393,41 @@
         />
         <br />
       </form>
-      <button id="clear">Clear Dashboard</button>
+      <button id="clear-historical-dashboard">Clear Dashboard</button>
       <button id="clear-historical-input">Clear Inputs</button>
       <section class="historical-section"></section>
     </section>
+    <section class="main section hidden">
+      <div class="info-container">
+        <h3>Disclaimer</h3>
+        <p>
+          The accuracy of the exchange rates and results of the calculator
+          cannot be guaranteed. Do not take any decision based on the results or
+          content of this website! Always confirm actual currency rates with a
+          bank before making transactions! Rates on this website are for
+          information purposes only and are subject to change without notice.
+          Rates on this website are no offer at all for a transaction. We are
+          not liable for the content of externally linked websites.
+        </p>
+        <h4>Historical rates</h4>
+        <p>
+          Some requested information regarding historical rates may not be
+          available. For more information about this visit
+          <a href="https://www.xe.com/es/currencytables/" target="_blank"
+            >this site.</a
+          >
+        </p>
+      </div>
+    </section>
+    <footer class="footer">
+      <a id="disclaimer" href="#">Disclaimer</a>
+      <a
+        href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+        target="_blank"
+        >European Central Bank</a
+      >
+      <a href="https://www.frankfurter.app/" target="_blank">API</a>
+    </footer>
     <script src="./js/main.js" type="module"></script>
   </body>
 </html>

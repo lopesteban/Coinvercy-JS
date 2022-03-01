@@ -1,21 +1,23 @@
 @use "../themes/colours" as c;
 
-.header {
+.footer {
   width: 100%;
   height: 4rem;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 1;
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  box-shadow: 5px 5px 6px #444;
   background-color: c.$main-bg;
-  color: c.$main-font-color;
-  padding: 2%;
-}
 
-.page-title {
-  font-size: 2rem;
+  a:link,
+  a:visited {
+    color: c.$main-font-color;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
 }
