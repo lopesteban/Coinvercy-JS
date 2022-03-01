@@ -1,0 +1,25 @@
+.main {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 7rem;
+  right: 0;
+}
+
+// .title {
+// font-size: 2.5rem;
+// align-self: center;
+// }
+
+.section {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
