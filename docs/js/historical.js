@@ -36,7 +36,10 @@ const getHistorical = () => {
         })
         .catch((err) => {
           if (err.status === 404) {
-            $sectionContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist or the requested information may not be available`;
+            $sectionContent.innerHTML = `
+            <p>Error ${err.status}: Not Found - The values may not exist or may not be available.</p><br><p>Some requested information regarding historical rates may not be
+            available.</p><br><p>For more information about this, visit
+            <a href="https://www.xe.com/es/currencytables/" target="_blank">this site.</a></p>`;
           } else {
             $sectionContent.innerHTML = `<h3>Error ${err.status}: Oops! Something went wrong </h3>`;
           }
@@ -70,7 +73,12 @@ const getHistoricalBetween = () => {
         })
         .catch((err) => {
           if (err.status === 404) {
-            $sectionContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist or the requested information may not be available.`;
+            $sectionContent.innerHTML = `
+            <p>Error ${err.status}: Not Found - The values may not exist or may not be available.</p>
+            <br><p>Some requested information regarding historical rates may not be
+            available.</p><br>
+            <p>For more information about this visit
+            <a href="https://www.xe.com/es/currencytables/" target="_blank">this site.</a></p>`;
           } else {
             $sectionContent.innerHTML = `<h3>Error ${err.status}: Oops! Something went wrong </h3>`;
           }

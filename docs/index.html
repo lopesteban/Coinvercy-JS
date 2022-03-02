@@ -55,10 +55,14 @@
       </div>
     </section>
     <section class="main section hidden">
+      <div class="converter-container">    
       <h2 class="section-title">Currency converter</h2>
-
-      <button id="get-currencies">See currencies</button>
-      <form class="currency-form content">
+      <div class="see-currencies">
+        <button id="get-currencies">Available currencies</button>   
+        <section class="display-currencies-section"></section>
+        </div>
+        <div class="convert-currencies">   
+        <form class="currency-form content">
         <label for="amount">Amount</label><br />
         <input
           type="text"
@@ -70,7 +74,6 @@
           required
         />
         <br />
-
         <label for="from">From currency</label><br />
         <select name="from" id="from-converter">
           <option value="AUD">Australian Dollar</option>
@@ -151,9 +154,13 @@
       <button id="clear-converter-dashboard">Clear Dashboard</button>
       <button id="clear-converter-inputs">Clear Inputs</button>
       <section class="users-section"></section>
+      </div>
+
     </section>
+  </div>
     <section class="main section hidden">
-      <h2>Latest exchange rates</h2>
+      <div class="latest-rates-container">      
+      <h2 class="section-title">Latest exchange rates</h2>
       <form class="latest-form">
         <label for="from">From currency</label><br />
         <select name="from" id="from-latest">
@@ -205,9 +212,12 @@
       <button id="clear-latest-dashboard" class="btn">Clear Dashboard</button>
       <button id="clear-latest-inputs">Clear Inputs</button>
       <section class="latest-section"></section>
+    </div>
     </section>
     <section class="main section hidden">
-      <h2>Get Historical</h2>
+      <div class="historical-rates-container">     
+      <h2 class="section-title">Historical rate tables</h2>
+      <h3 class="section-title">See Historical rate</h3>
       <form class="history-form content">
         <label for="from">From currency</label><br />
         <select name="from" id="from-historical">
@@ -282,7 +292,7 @@
         <input type="submit" id="get-historical" value="Get Historical" />
       </form>
       <hr />
-      <h2>Get Hstorical between two currencies</h2>
+      <h3 class="section-title">See Historical rate between two currencies</h3>
       <form class="history-between content">
         <label for="from">From currency</label><br />
         <select name="fromB" id="from-historical-B">
@@ -396,10 +406,11 @@
       <button id="clear-historical-dashboard">Clear Dashboard</button>
       <button id="clear-historical-input">Clear Inputs</button>
       <section class="historical-section"></section>
+    </div>
     </section>
     <section class="main section hidden">
       <div class="info-container">
-        <h3>Disclaimer</h3>
+        <h2 class="section-title">Disclaimer</h2>
         <p>
           The accuracy of the exchange rates and results of the calculator
           cannot be guaranteed. Do not take any decision based on the results or
@@ -408,14 +419,6 @@
           information purposes only and are subject to change without notice.
           Rates on this website are no offer at all for a transaction. We are
           not liable for the content of externally linked websites.
-        </p>
-        <h4>Historical rates</h4>
-        <p>
-          Some requested information regarding historical rates may not be
-          available. For more information about this visit
-          <a href="https://www.xe.com/es/currencytables/" target="_blank"
-            >this site.</a
-          >
         </p>
       </div>
     </section>

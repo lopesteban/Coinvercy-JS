@@ -1,0 +1,10 @@
+@use "../themes/colours" as c;
+
+@mixin card-container($width, $shadow) {
+  width: $width;
+  height: auto;
+  margin-bottom: 5rem;
+  border-radius: 8px;
+  box-shadow: $shadow;
+  background-color: c.$main-font-color;
+}

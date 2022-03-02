@@ -2,6 +2,7 @@
 import { d, navBarLink, sections } from "./elements.js";
 
 const $sectionContent = d.querySelector(".users-section"),
+  $currenciesListContent = d.querySelector(".display-currencies-section"),
   $fragment = d.createDocumentFragment(),
   $form = d.querySelector(".currency-form");
 
@@ -15,13 +16,17 @@ const fetchingCurrencies = () => {
         $div.insertAdjacentHTML("afterbegin", $divContent);
         $fragment.appendChild($div);
       }
-      $sectionContent.appendChild($fragment);
+      $currenciesListContent.appendChild($fragment);
+      const $clearListBtn = d.createElement("button");
+      $clearListBtn.id = "clear-list-dashboard";
+      $clearListBtn.textContent = "Clear Dashboard";
+      $currenciesListContent.appendChild($clearListBtn);
     })
     .catch((err) => {
       if (err.status === 404) {
-        $sectionContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist`;
+        $currenciesListContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist`;
       } else {
-        $sectionContent.innerHTML = `<h3>Error ${err.status}: Oops! Something went wrong </h3>`;
+        $currenciesListContent.innerHTML = `<h3>Error ${err.status}: Oops! Something went wrong </h3>`;
       }
     });
 };
@@ -89,6 +94,13 @@ export const clickingCurrencies = () => {
     }
     if (target.matches("#calculate")) {
       converting();
+      // $buttons.forEach((btn) => {
+      //   btn.disabled = false;
+      // });
+    }
+    if (target.matches("#clear-list-dashboard")) {
+      $currenciesListContent.innerHTML = null;
+
       $buttons.forEach((btn) => {
         btn.disabled = false;
       });
@@ -96,10 +108,6 @@ export const clickingCurrencies = () => {
 
     if (target.matches("#clear-converter-dashboard")) {
       $sectionContent.innerHTML = null;
-
-      $buttons.forEach((btn) => {
-        btn.disabled = false;
-      });
     }
     if (target.matches("#clear-converter-inputs")) {
       d.getElementById("amount").value = "";

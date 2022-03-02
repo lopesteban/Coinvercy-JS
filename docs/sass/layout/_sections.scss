@@ -1,3 +1,5 @@
+@use "../themes/colours" as c;
+
 .section {
   width: 100%;
   height: auto;
@@ -18,4 +20,8 @@
 
 .section-title {
   text-align: center;
+  color: c.$main-bg;
+  width: 100%;
+  background-color: c.$secondary-bg;
+  padding: 3%;
 }
