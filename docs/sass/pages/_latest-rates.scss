@@ -3,4 +3,8 @@
 
 .latest-rates-container {
   @include m.card-container(90%, rgba(35, 55, 80, 30%) 0 6px 12px);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }

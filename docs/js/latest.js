@@ -7,13 +7,6 @@ const $sectionContent = d.querySelector(".latest-section"),
   $getLatest = d.getElementById("get-latest-v");
 
 const fetchingLatest = () => {
-  d.addEventListener("keyup", (e) => {
-    let target = e.target;
-    if (target === $formLatest.from) {
-      if (target.value === "") $getLatest.disabled = false;
-    }
-  });
-
   d.addEventListener("submit", (e) => {
     let target = e.target;
     if (target === $formLatest) {
@@ -31,6 +24,10 @@ const fetchingLatest = () => {
           }
           $sectionContent.innerHTML = `<h3>Updated list of compared currencies rates to ${$from} rate</h3>`;
           $sectionContent.appendChild($fragment);
+          const $clearLatestBtn = d.createElement("button");
+          $clearLatestBtn.id = "clear-latest-dashboard";
+          $clearLatestBtn.textContent = "Clear";
+          $sectionContent.appendChild($clearLatestBtn);
         })
         .catch((err) => {
           if (err.status === 404) {

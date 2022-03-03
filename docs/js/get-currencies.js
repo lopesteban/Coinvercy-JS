@@ -12,14 +12,14 @@ const fetchingCurrencies = () => {
     .then((currencies) => {
       for (const currency in currencies) {
         let $div = d.createElement("div"),
-          $divContent = `<a href="#">Currency: <strong>${currencies[currency]}</strong> - Acronym: <strong>${currency}</strong></a><hr>`;
+          $divContent = `<div class="currency-link" value="${currency}" >Currency: <strong>${currencies[currency]}</strong> - Acronym: <strong>${currency}</strong></div><hr>`;
         $div.insertAdjacentHTML("afterbegin", $divContent);
         $fragment.appendChild($div);
       }
       $currenciesListContent.appendChild($fragment);
       const $clearListBtn = d.createElement("button");
       $clearListBtn.id = "clear-list-dashboard";
-      $clearListBtn.textContent = "Clear Dashboard";
+      $clearListBtn.textContent = "Clear";
       $currenciesListContent.appendChild($clearListBtn);
     })
     .catch((err) => {
@@ -50,6 +50,10 @@ const converting = () => {
             $divContent = `<p>${$amount} ${$from} is equal to ${data.rates[$to]} ${$to}</p>`;
           $div.insertAdjacentHTML("afterbegin", $divContent);
           $sectionContent.appendChild($div);
+          const $clearConvercyBtn = d.createElement("button");
+          $clearConvercyBtn.id = "clear-converter-dashboard";
+          $clearConvercyBtn.textContent = "Clear";
+          $sectionContent.appendChild($clearConvercyBtn);
         })
         .catch((err) => {
           if (err.status === 404) {
@@ -94,9 +98,9 @@ export const clickingCurrencies = () => {
     }
     if (target.matches("#calculate")) {
       converting();
-      // $buttons.forEach((btn) => {
-      //   btn.disabled = false;
-      // });
+    }
+    if (target.matches("#invert-values")) {
+      [$form.from.value, $form.to.value] = [$form.to.value, $form.from.value];
     }
     if (target.matches("#clear-list-dashboard")) {
       $currenciesListContent.innerHTML = null;
@@ -109,6 +113,10 @@ export const clickingCurrencies = () => {
     if (target.matches("#clear-converter-dashboard")) {
       $sectionContent.innerHTML = null;
     }
+    // if (target.matches(".currency-link")) {
+    //   $form.from.value = target.value;
+    // }
+
     if (target.matches("#clear-converter-inputs")) {
       d.getElementById("amount").value = "";
       d.getElementById("from-converter").value = "";

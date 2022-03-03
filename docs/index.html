@@ -12,9 +12,9 @@
       <h1 class="page-title">Coinvercy</h1>
       <nav class="navbar">
         <a class="navlink" href="/info">Info</a>
-        <a class="navlink" href="/converter">Currency converter</a>
+        <a class="navlink" href="/converter">Converter</a>
         <a class="navlink" href="/latest">Latest rates</a>
-        <a class="navlink" href="/historical">Compare historical rates</a>
+        <a class="navlink" href="/historical">Historical rates</a>
       </nav>
     </header>
     <section class="main section">
@@ -23,7 +23,8 @@
         <h3>Our currency converter</h3>
         <p>
           With our unique currency converter you can easily and quickly convert
-          currencies with many advantages: All foreign currencies of the world.
+          currencies with many advantages: 
+          Lots of foreign currencies of the world.
           Tracks foreign exchange references rates published by the
           <a
             href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
@@ -33,8 +34,8 @@
           >. The data refreshes around 16:00 CET every working day. Historical
           financial rates for any working day since 4 January 1999. Fast and
           comfortable like a mobile app. Additional features like conversion
-          history, copy result or inverse conversion. Interactive chart. Handy
-          conversion tables directly to your mobile for holidays and business
+          history or inverse conversion. Handy
+          conversion tables for holidays and business
           trips.
         </p>
         <h3>Multiple currency converter</h3>
@@ -58,10 +59,12 @@
       <div class="converter-container">    
       <h2 class="section-title">Currency converter</h2>
       <div class="see-currencies">
-        <button id="get-currencies">Available currencies</button>   
+        <h3>Available currencies</h3>
+        <button id="get-currencies">Check our List</button>   
         <section class="display-currencies-section"></section>
         </div>
         <div class="convert-currencies">   
+          <h3>Convert</h3>
         <form class="currency-form content">
         <label for="amount">Amount</label><br />
         <input
@@ -75,7 +78,7 @@
         />
         <br />
         <label for="from">From currency</label><br />
-        <select name="from" id="from-converter">
+        <select name="from" id="from-converter" required>
           <option value="AUD">Australian Dollar</option>
           <option value="BGN">Bulgarian Lev</option>
           <option value="BRL">Brazilian real</option>
@@ -112,7 +115,7 @@
         </select>
         <br />
         <label for="to">To currency</label><br />
-        <select name="to" id="to-converter">
+        <select name="to" id="to-converter" required>
           <option value="AUD">Australian Dollar</option>
           <option data-text-content="Bulgarian Lev" value="BGN">
             Bulgarian Lev
@@ -151,7 +154,7 @@
         ><br />
         <input id="calculate" type="submit" value="Calculate" />
       </form>
-      <button id="clear-converter-dashboard">Clear Dashboard</button>
+      <button id="invert-values">Invert</button><br>
       <button id="clear-converter-inputs">Clear Inputs</button>
       <section class="users-section"></section>
       </div>
@@ -209,15 +212,15 @@
           value="Get latest rates"
         />
       </form>
-      <button id="clear-latest-dashboard" class="btn">Clear Dashboard</button>
       <button id="clear-latest-inputs">Clear Inputs</button>
       <section class="latest-section"></section>
     </div>
     </section>
     <section class="main section hidden">
-      <div class="historical-rates-container">     
+      <div class="historical-rates-container">   
       <h2 class="section-title">Historical rate tables</h2>
-      <h3 class="section-title">See Historical rate</h3>
+      <div class="historical-rates"> 
+      <h3>Compare Historical rates</h3>
       <form class="history-form content">
         <label for="from">From currency</label><br />
         <select name="from" id="from-historical">
@@ -291,8 +294,11 @@
         <br />
         <input type="submit" id="get-historical" value="Get Historical" />
       </form>
-      <hr />
-      <h3 class="section-title">See Historical rate between two currencies</h3>
+      <button id="clear-historical-input">Clear Inputs</button>
+      <section class="display-historical-rate"></section>
+    </div>
+    <div class="historical-rates-between">    
+      <h3 >Compare Historical rate between two currencies</h3>
       <form class="history-between content">
         <label for="from">From currency</label><br />
         <select name="fromB" id="from-historical-B">
@@ -373,7 +379,7 @@
           name="dayB"
           placeholder="day"
           pattern="(0[1-9]|1\d|2\d|3[01])"
-          data-historical
+          data-historical-between
           required
         />
         <br />
@@ -382,7 +388,7 @@
           name="monthB"
           placeholder="month"
           pattern="^(0[1-9]|1[0-2])"
-          data-historical
+          data-historical-between
           required
         />
         <br />
@@ -392,7 +398,7 @@
           placeholder="year"
           min="1999"
           max="2022"
-          data-historical
+          data-historical-between
           required
         />
         <br />
@@ -403,10 +409,11 @@
         />
         <br />
       </form>
-      <button id="clear-historical-dashboard">Clear Dashboard</button>
-      <button id="clear-historical-input">Clear Inputs</button>
-      <section class="historical-section"></section>
+      <button id="invert-between-values">Invert</button>
+      <button id="clear-historical-between-input">Clear Inputs</button>
+      <section class="display-historical-rate-between"></section>
     </div>
+  </div>
     </section>
     <section class="main section hidden">
       <div class="info-container">

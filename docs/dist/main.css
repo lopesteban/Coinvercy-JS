@@ -147,6 +147,10 @@
   border-radius: 8px;
   box-shadow: rgba(35, 55, 80, 0.3) 0 6px 12px;
   background-color: #fff;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .historical-rates-container {
@@ -156,6 +160,16 @@
   border-radius: 8px;
   box-shadow: rgba(35, 55, 80, 0.3) 0 6px 12px;
   background-color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.historical-rates {
+  width: 50%;
+}
+
+.historical-rates-between {
+  width: 50%;
 }
 
 /*# sourceMappingURL=main.css.map */
