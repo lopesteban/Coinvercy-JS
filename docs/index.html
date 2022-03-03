@@ -166,7 +166,7 @@
       <h2 class="section-title">Latest exchange rates</h2>
       <form class="latest-form">
         <label for="from">From currency</label><br />
-        <select name="from" id="from-latest">
+        <select name="from" id="from-latest" required>
           <option data-text="Australian Dollar" value="AUD">
             Australian Dollar
           </option>
@@ -223,7 +223,7 @@
       <h3>Compare Historical rates</h3>
       <form class="history-form content">
         <label for="from">From currency</label><br />
-        <select name="from" id="from-historical">
+        <select name="from" id="from-historical" required>
           <option value="AUD">Australian Dollar</option>
           <option value="BGN">Bulgarian Lev</option>
           <option value="BRL">Brazilian real</option>
@@ -301,7 +301,7 @@
       <h3 >Compare Historical rate between two currencies</h3>
       <form class="history-between content">
         <label for="from">From currency</label><br />
-        <select name="fromB" id="from-historical-B">
+        <select name="fromB" id="from-historical-B" required>
           <option value="AUD">Australian Dollar</option>
           <option value="BGN">Bulgarian Lev</option>
           <option value="BRL">Brazilian real</option>
@@ -338,7 +338,7 @@
         </select>
         <br />
         <label for="to">To currency</label><br />
-        <select name="toB" id="to-historical-B">
+        <select name="toB" id="to-historical-B" required>
           <option value="AUD">Australian Dollar</option>
           <option value="BGN">Bulgarian Lev</option>
           <option value="BRL">Brazilian real</option>
