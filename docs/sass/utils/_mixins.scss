@@ -3,12 +3,13 @@
 @mixin card-container($width, $shadow) {
   width: $width;
   height: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   border-radius: 8px;
   box-shadow: $shadow;
   background-color: c.$main-font-color;
 }
 
+//BUTTONS
 @mixin main-button {
   display: inline;
   -webkit-box-pack: center;
@@ -49,14 +50,20 @@
   border-radius: 8px;
 }
 
+//FORMS
 @mixin form-style($width) {
-  padding: 2% 4%;
+  width: $width;
   display: flex;
   flex-flow: column;
+  align-items: center;
   font-weight: 500;
 
   select {
     box-shadow: rgba(0, 17, 51, 5%) 0px 3px 15px;
     border-radius: 5px;
+    border: 1px solid rgb(221, 221, 221);
+    padding: 2%;
+    overflow: hidden;
+    width: 90%;
   }
 }

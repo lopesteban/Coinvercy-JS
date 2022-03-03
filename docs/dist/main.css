@@ -66,7 +66,7 @@
   color: #0a146e;
   width: 100%;
   background-color: #f0f5fa;
-  padding: 3%;
+  padding: 1.5%;
 }
 
 .form-style {
@@ -80,7 +80,7 @@
 
 .footer {
   width: 100%;
-  height: 3rem;
+  height: 2.5rem;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -116,7 +116,7 @@
 .info-container {
   width: 70%;
   height: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   border-radius: 8px;
   box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -133,7 +133,7 @@
 .converter-container {
   width: 90%;
   height: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   border-radius: 8px;
   box-shadow: rgba(35, 55, 80, 0.3) 0 6px 12px;
   background-color: #fff;
@@ -150,7 +150,10 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: flex-start;
   border-right: double #0a146e;
+  padding: 2% 0;
+  gap: 2rem;
 }
 .see-currencies h3 {
   text-align: center;
@@ -162,6 +165,9 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: flex-start;
+  padding: 2% 0;
+  gap: 1rem;
 }
 .convert-currencies h3 {
   text-align: center;
@@ -169,29 +175,30 @@
 }
 
 .currency-form {
-  padding: 2% 4%;
+  width: 80%;
   display: flex;
   flex-flow: column;
+  align-items: center;
   font-weight: 500;
 }
 .currency-form select {
   box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
   border-radius: 5px;
+  border: 1px solid #dddddd;
+  padding: 2%;
+  overflow: hidden;
+  width: 90%;
 }
 
-/*//FORMS STYLE
-.form-style {
-  width: 80%;
-  display: flex;
-  flex-flow: column;
-
-  label {
-    font-weight: 500;
-  }
+#amount {
+  width: 90%;
+  box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+  border-radius: 5px;
+  padding: 2%;
+  border: 1px solid #dddddd;
 }
-*/
+
 #get-currencies,
-#calculate,
 #invert-values,
 #clear-converter-inputs {
   display: inline;
@@ -213,7 +220,19 @@
   border-radius: 8px;
 }
 
+#invert-values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #006fe8;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #dddddd;
+}
+
 #clear-list-dashboard,
+#calculate,
 #clear-converter-dashboard {
   display: inline;
   -webkit-box-pack: center;
@@ -234,10 +253,14 @@
   border-radius: 8px;
 }
 
+#calculate {
+  width: 30%;
+}
+
 .latest-rates-container {
   width: 90%;
   height: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   border-radius: 8px;
   box-shadow: rgba(35, 55, 80, 0.3) 0 6px 12px;
   background-color: #fff;
@@ -291,7 +314,7 @@
 .historical-rates-container {
   width: 90%;
   height: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   border-radius: 8px;
   box-shadow: rgba(35, 55, 80, 0.3) 0 6px 12px;
   background-color: #fff;

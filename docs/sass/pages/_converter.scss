@@ -17,7 +17,10 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: flex-start;
   border-right: double c.$main-bg;
+  padding: 2% 0;
+  gap: 2rem;
 
   h3 {
     text-align: center;
@@ -30,6 +33,9 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: flex-start;
+  padding: 2% 0;
+  gap: 1rem;
 
   h3 {
     text-align: center;
@@ -37,31 +43,43 @@
   }
 }
 
+//FORM
 .currency-form {
-  @include m.form-style(70%);
+  @include m.form-style(80%);
 }
 
-/*//FORMS STYLE
-.form-style {
-  width: 80%;
-  display: flex;
-  flex-flow: column;
-
-  label {
-    font-weight: 500;
-  }
+#amount {
+  width: 90%;
+  box-shadow: rgba(0, 17, 51, 5%) 0px 3px 15px;
+  border-radius: 5px;
+  padding: 2%;
+  border: 1px solid rgb(221, 221, 221);
 }
-*/
 
 //BUTTONS STYLE
 #get-currencies,
-#calculate,
 #invert-values,
 #clear-converter-inputs {
   @include m.main-button;
 }
 
+#invert-values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: c.$button-border;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgb(221, 221, 221);
+}
+
 #clear-list-dashboard,
+#calculate,
 #clear-converter-dashboard {
   @include m.second-button;
+}
+
+#calculate {
+  width: 30%;
 }
