@@ -5,12 +5,47 @@
   @include m.card-container(90%, rgba(35, 55, 80, 30%) 0 6px 12px);
   display: flex;
   flex-flow: row wrap;
+
+  h3 {
+    color: c.$main-bg;
+  }
 }
 
 .historical-rates {
   width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-right: double c.$main-bg;
+
+  h3 {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .historical-rates-between {
   width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  h3 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+//BUTTON STYLE
+#get-historical,
+#clear-historical-input,
+#get-historical-between,
+#invert-between-values,
+#clear-historical-between-input {
+  @include m.main-button;
+}
+
+#clear-historical-dashboard,
+#clear-historical-between-dashboard {
+  @include m.second-button;
 }

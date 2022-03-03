@@ -5,12 +5,63 @@
   @include m.card-container(90%, rgba(35, 55, 80, 30%) 0 6px 12px);
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-evenly;
+
+  h3 {
+    color: c.$main-bg;
+  }
 }
 
 .see-currencies {
   width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-right: double c.$main-bg;
+
+  h3 {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .convert-currencies {
   width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  h3 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.currency-form {
+  @include m.form-style(70%);
+}
+
+/*//FORMS STYLE
+.form-style {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+
+  label {
+    font-weight: 500;
+  }
+}
+*/
+
+//BUTTONS STYLE
+#get-currencies,
+#calculate,
+#invert-values,
+#clear-converter-inputs {
+  @include m.main-button;
+}
+
+#clear-list-dashboard,
+#clear-converter-dashboard {
+  @include m.second-button;
 }

@@ -25,3 +25,14 @@
   background-color: c.$secondary-bg;
   padding: 3%;
 }
+
+//FORMS STYLE
+.form-style {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+
+  label {
+    font-weight: 500;
+  }
+}

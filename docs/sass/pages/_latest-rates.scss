@@ -8,3 +8,13 @@
   justify-content: center;
   align-items: center;
 }
+
+//BUTTONS STYLE
+#get-latest-v,
+#clear-latest-inputs {
+  @include m.main-button;
+}
+
+#clear-latest-dashboard {
+  @include m.second-button;
+}

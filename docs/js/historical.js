@@ -151,7 +151,6 @@ export const clickingHistorical = () => {
     }
     if (target.matches("#clear-historical-between-input")) {
       historicalBetweenInputs.forEach((input) => (input.value = ""));
-      // d.getElementById("from-historical").value = "";
       d.getElementById("from-historical-B").value = "";
       d.getElementById("to-historical-B").value = "";
     }

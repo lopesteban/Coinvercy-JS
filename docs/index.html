@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/Dollar_Coin_icon-icons.com_56679.ico">
     <title>Coinvercy</title>
   </head>
   <body class="body">
@@ -65,20 +66,19 @@
         </div>
         <div class="convert-currencies">   
           <h3>Convert</h3>
-        <form class="currency-form content">
-        <label for="amount">Amount</label><br />
-        <input
+          <form class="currency-form">
+            <label for="amount">Amount</label>
+            <input
           type="text"
           id="amount"
           name="amount"
-          placeholder="00.0$"
+          placeholder="0.00 $"
           pattern="^[0-9]+$"
           data-converter
           required
         />
-        <br />
-        <label for="from">From currency</label><br />
-        <select name="from" id="from-converter" required>
+            <label for="from">From currency</label>
+            <select name="from" id="from-converter" required>
           <option value="AUD">Australian Dollar</option>
           <option value="BGN">Bulgarian Lev</option>
           <option value="BRL">Brazilian real</option>
@@ -112,11 +112,10 @@
           <option value="TRY">Turkish Lira</option>
           <option value="USD">United States Dollar</option>
           <option value="ZAR">South African Rand</option>
-        </select>
-        <br />
-        <label for="to">To currency</label><br />
-        <select name="to" id="to-converter" required>
-          <option value="AUD">Australian Dollar</option>
+            </select>
+            <label for="to">To currency</label>
+            <select name="to" id="to-converter" required>
+              <option value="AUD">Australian Dollar</option>
           <option data-text-content="Bulgarian Lev" value="BGN">
             Bulgarian Lev
           </option>
@@ -158,13 +157,11 @@
       <button id="clear-converter-inputs">Clear Inputs</button>
       <section class="users-section"></section>
       </div>
-
     </section>
-  </div>
     <section class="main section hidden">
       <div class="latest-rates-container">      
       <h2 class="section-title">Latest exchange rates</h2>
-      <form class="latest-form">
+      <form class="latest-form form-style">
         <label for="from">From currency</label><br />
         <select name="from" id="from-latest" required>
           <option data-text="Australian Dollar" value="AUD">

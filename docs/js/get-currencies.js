@@ -24,7 +24,12 @@ const fetchingCurrencies = () => {
     })
     .catch((err) => {
       if (err.status === 404) {
-        $currenciesListContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist`;
+        $currenciesListContent.innerHTML = `<h3>Error ${err.status}: Not Found - The values may not exist</h3>
+        `;
+        const $clearListBtn = d.createElement("button");
+        $clearListBtn.id = "clear-list-dashboard";
+        $clearListBtn.textContent = "Clear";
+        $currenciesListContent.appendChild($clearListBtn);
       } else {
         $currenciesListContent.innerHTML = `<h3>Error ${err.status}: Oops! Something went wrong </h3>`;
       }
@@ -58,7 +63,12 @@ const converting = () => {
         .catch((err) => {
           if (err.status === 404) {
             $sectionContent.innerHTML = null;
-            $sectionContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist`;
+            $sectionContent.innerHTML = `<h3>Error ${err.status}: Not Found - The values may not exist</h3>
+            `;
+            const $clearConvercyBtn = d.createElement("button");
+            $clearConvercyBtn.id = "clear-converter-dashboard";
+            $clearConvercyBtn.textContent = "Clear";
+            $sectionContent.appendChild($clearConvercyBtn);
           } else {
             $sectionContent.innerHTML = null;
             $sectionContent.innerHTML = `<h3>Error ${err.status}: Oops! Something went wrong </h3>`;
@@ -113,9 +123,6 @@ export const clickingCurrencies = () => {
     if (target.matches("#clear-converter-dashboard")) {
       $sectionContent.innerHTML = null;
     }
-    // if (target.matches(".currency-link")) {
-    //   $form.from.value = target.value;
-    // }
 
     if (target.matches("#clear-converter-inputs")) {
       d.getElementById("amount").value = "";

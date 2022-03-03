@@ -69,6 +69,15 @@
   padding: 3%;
 }
 
+.form-style {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+}
+.form-style label {
+  font-weight: 500;
+}
+
 .footer {
   width: 100%;
   height: 3rem;
@@ -130,14 +139,99 @@
   background-color: #fff;
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.converter-container h3 {
+  color: #0a146e;
 }
 
 .see-currencies {
   width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-right: double #0a146e;
+}
+.see-currencies h3 {
+  text-align: center;
+  width: 100%;
 }
 
 .convert-currencies {
   width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.convert-currencies h3 {
+  text-align: center;
+  width: 100%;
+}
+
+.currency-form {
+  padding: 2% 4%;
+  display: flex;
+  flex-flow: column;
+  font-weight: 500;
+}
+.currency-form select {
+  box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+  border-radius: 5px;
+}
+
+/*//FORMS STYLE
+.form-style {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+
+  label {
+    font-weight: 500;
+  }
+}
+*/
+#get-currencies,
+#calculate,
+#invert-values,
+#clear-converter-inputs {
+  display: inline;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 0px;
+  width: auto;
+  cursor: pointer;
+  outline-offset: 4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #006fe8;
+  background: none;
+  border: 2px solid #006fe8;
+  border-radius: 8px;
+}
+
+#clear-list-dashboard,
+#clear-converter-dashboard {
+  display: inline;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 0px;
+  width: auto;
+  cursor: pointer;
+  outline-offset: 4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #006fe8;
+  border: 2px solid #006fe8;
+  border-radius: 8px;
 }
 
 .latest-rates-container {
@@ -153,6 +247,47 @@
   align-items: center;
 }
 
+#get-latest-v,
+#clear-latest-inputs {
+  display: inline;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 0px;
+  width: auto;
+  cursor: pointer;
+  outline-offset: 4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #006fe8;
+  background: none;
+  border: 2px solid #006fe8;
+  border-radius: 8px;
+}
+
+#clear-latest-dashboard {
+  display: inline;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 0px;
+  width: auto;
+  cursor: pointer;
+  outline-offset: 4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #006fe8;
+  border: 2px solid #006fe8;
+  border-radius: 8px;
+}
+
 .historical-rates-container {
   width: 90%;
   height: auto;
@@ -163,13 +298,76 @@
   display: flex;
   flex-flow: row wrap;
 }
+.historical-rates-container h3 {
+  color: #0a146e;
+}
 
 .historical-rates {
   width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-right: double #0a146e;
+}
+.historical-rates h3 {
+  text-align: center;
+  width: 100%;
 }
 
 .historical-rates-between {
   width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.historical-rates-between h3 {
+  text-align: center;
+  width: 100%;
+}
+
+#get-historical,
+#clear-historical-input,
+#get-historical-between,
+#invert-between-values,
+#clear-historical-between-input {
+  display: inline;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 0px;
+  width: auto;
+  cursor: pointer;
+  outline-offset: 4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #006fe8;
+  background: none;
+  border: 2px solid #006fe8;
+  border-radius: 8px;
+}
+
+#clear-historical-dashboard,
+#clear-historical-between-dashboard {
+  display: inline;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 0px;
+  width: auto;
+  cursor: pointer;
+  outline-offset: 4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #006fe8;
+  border: 2px solid #006fe8;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -31,9 +31,17 @@ const fetchingLatest = () => {
         })
         .catch((err) => {
           if (err.status === 404) {
-            $sectionContent.innerHTML = `Error ${err.status}: Not Found - The values may not exist`;
+            $sectionContent.innerHTML = `<h3>Error ${err.status}: Not Found - The values may not exist</h3>`;
+            const $clearLatestBtn = d.createElement("button");
+            $clearLatestBtn.id = "clear-latest-dashboard";
+            $clearLatestBtn.textContent = "Clear";
+            $sectionContent.appendChild($clearLatestBtn);
           } else {
             $sectionContent.innerHTML = `<h3>Error ${err.status}: Oops! Something went wrong </h3>`;
+            const $clearLatestBtn = d.createElement("button");
+            $clearLatestBtn.id = "clear-latest-dashboard";
+            $clearLatestBtn.textContent = "Clear";
+            $sectionContent.appendChild($clearLatestBtn);
           }
         });
     }
