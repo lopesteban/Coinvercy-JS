@@ -26,6 +26,15 @@
   }
 }
 
+.display-historical-rate {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2% 0;
+}
+
 .historical-rates-between {
   width: 50%;
   display: flex;
@@ -38,6 +47,15 @@
     text-align: center;
     width: 100%;
   }
+}
+
+.display-historical-rate-between {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2% 0;
 }
 
 //BUTTON STYLE

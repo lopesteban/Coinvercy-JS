@@ -1,0 +1,16 @@
+@use "../utils/mixins" as m;
+@use "../themes/colours" as c;
+
+//INFO CARD CONTAINER
+.currency-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  width: 90%;
+  height: 3rem;
+  box-shadow: rgba(0, 17, 51, 5%) 0px 3px 15px;
+  border-radius: 5px;
+  padding: 2%;
+  border: 1px solid rgb(221, 221, 221);
+}

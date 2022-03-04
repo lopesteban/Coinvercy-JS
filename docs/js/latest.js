@@ -17,9 +17,9 @@ const fetchingLatest = () => {
         .then((latest) => {
           let rates = latest.rates;
           for (const currencies in rates) {
-            let $div = d.createElement("div"),
-              $divsContent = `1 ${$from} is equal to ${rates[currencies]} ${currencies}`;
-            $div.insertAdjacentHTML("afterbegin", $divsContent);
+            let $div = d.createElement("div");
+            $div.classList.add("currency-card");
+            $div.innerHTML = `<img class="flag-icon" src="./assets/${$from}.png"> <p><strong>1 ${$from}</strong> is equal to <strong>${rates[currencies]} ${currencies}</strong></p> <img class="flag-icon" src="./assets/${currencies}.png">`;
             $fragment.appendChild($div);
           }
           $sectionContent.innerHTML = `<h3>Updated list of compared currencies rates to ${$from} rate</h3>`;
@@ -69,10 +69,11 @@ export const clickingLatest = () => {
         }
       }
     }
-    if (target.matches("#get-latest-v")) fetchingLatest();
+    if (target.matches("#get-latest-v")) {
+      fetchingLatest();
+    }
     if (target.matches("#clear-latest-dashboard")) {
       $sectionContent.innerHTML = null;
-      $getLatest.disabled = false;
     }
     if (target.matches("#clear-latest-inputs")) {
       d.getElementById("from-latest").value = "";

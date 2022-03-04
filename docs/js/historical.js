@@ -32,12 +32,12 @@ const getHistorical = () => {
         .then((dates) => {
           let currencyDates = dates.rates;
           for (const currencies in currencyDates) {
-            let $div = d.createElement("div"),
-              $divsContent = `<p>1 ${$from} = ${currencyDates[currencies]} ${currencies}</p>`;
-            $div.insertAdjacentHTML("afterbegin", $divsContent);
+            let $div = d.createElement("div");
+            $div.classList.add("currency-card");
+            $div.innerHTML = `<img class="flag-icon" src="./assets/${currencies}.png"> <p><strong> ${currencyDates[currencies]} ${currencies}</strong></p>`;
             $fragment.appendChild($div);
           }
-          $historicalRateSection.innerHTML = `<h3>Historical comparisons between ${$from} and other currencies</h3>`;
+          $historicalRateSection.innerHTML = `<h3>On ${$day}-${$month}-${$year}, <strong>1 ${$from}</strong> was equal to :</h3>`;
           $historicalRateSection.appendChild($fragment);
           const $clearHsitoricalBtn = d.createElement("button");
           $clearHsitoricalBtn.id = "clear-historical-dashboard";
@@ -80,9 +80,10 @@ const getHistoricalBetween = () => {
         .then((currencies) => {
           $historicalBetweenSection.innerHTML = null;
           let rate = currencies.rates[$to],
-            $div = d.createElement("div"),
-            $divsContent = `<p>${$day}-${$month}-${$year}: 1 ${$from} was equal to ${rate} ${$to}</p>`;
-          $div.insertAdjacentHTML("afterbegin", $divsContent);
+            $div = d.createElement("div");
+          $div.classList.add("currency-card");
+          $div.innerHTML = `<img class="flag-icon" src="./assets/${$from}.png"><p> <strong>1 ${$from}</strong> was equal to <strong>${rate} ${$to}</strong></p><img class="flag-icon" src="./assets/${$to}.png">`;
+          $historicalBetweenSection.innerHTML = `<h3>On ${$day}-${$month}-${$year}: </h3>`;
           $historicalBetweenSection.appendChild($div);
           const $clearHsitoricalBetweenBtn = d.createElement("button");
           $clearHsitoricalBetweenBtn.id = "clear-historical-between-dashboard";
