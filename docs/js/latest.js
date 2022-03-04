@@ -31,7 +31,12 @@ const fetchingLatest = () => {
         })
         .catch((err) => {
           if (err.status === 404) {
-            $sectionContent.innerHTML = `<h3>Error ${err.status}: Not Found - The values may not exist</h3>`;
+            $sectionContent.innerHTML = `
+            <p><strong>Error ${err.status}: Not Found</strong> - The values may not exist or may not be available.</p>
+            <p>Some requested information regarding historical rates may not be
+            available.</p><br>
+            <p>For more information about this,
+            <a href="https://www.xe.com/es/currencytables/" target="_blank">go here.</a></p>`;
             const $clearLatestBtn = d.createElement("button");
             $clearLatestBtn.id = "clear-latest-dashboard";
             $clearLatestBtn.textContent = "Clear";

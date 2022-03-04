@@ -27,10 +27,18 @@
 #clear-latest-inputs {
   @include m.main-button;
 }
+#clear-latest-inputs:hover {
+  animation: main-btn-hover 100ms ease-in forwards;
+}
 
 #get-latest-v,
 #clear-latest-dashboard {
   @include m.second-button;
+}
+
+#get-latest-v:hover,
+#clear-latest-dashboard:hover {
+  animation: secondary-btn-hover 100ms ease-in forwards;
 }
 
 //FORM STYLE

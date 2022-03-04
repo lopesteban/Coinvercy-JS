@@ -1,0 +1,21 @@
+@use "../themes/colours" as c;
+
+@keyframes main-btn-hover {
+  0% {
+    color: c.$button-border;
+    background: none;
+  }
+  100% {
+    color: c.$main-font-color;
+    background: c.$button-border;
+  }
+}
+
+@keyframes secondary-btn-hover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}

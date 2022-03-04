@@ -117,12 +117,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 1%;
+  gap: 1rem;
   width: 90%;
   height: 3rem;
   box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
   border-radius: 5px;
-  padding: 2%;
+  padding: 3%;
   border: 1px solid #dddddd;
 }
 
@@ -140,7 +140,7 @@
   color: #0a146e;
 }
 .info-container p {
-  margin: 1% 10% 2% 4%;
+  margin: 1% 4%;
 }
 
 .converter-container {
@@ -248,6 +248,11 @@
   border-radius: 8px;
 }
 
+#get-currencies:hover,
+#clear-converter-inputs:hover {
+  animation: main-btn-hover 100ms ease-in forwards;
+}
+
 #invert-values {
   display: flex;
   justify-content: center;
@@ -257,6 +262,7 @@
   width: 3rem;
   height: 3rem;
   border: 1px solid #dddddd;
+  cursor: pointer;
 }
 
 #clear-list-dashboard,
@@ -279,6 +285,12 @@
   background: #006fe8;
   border: 2px solid #006fe8;
   border-radius: 8px;
+}
+
+#clear-list-dashboard:hover,
+#calculate:hover,
+#clear-converter-dashboard:hover {
+  animation: secondary-btn-hover 100ms ease-in forwards;
 }
 
 .latest-rates-container {
@@ -327,6 +339,10 @@
   border-radius: 8px;
 }
 
+#clear-latest-inputs:hover {
+  animation: main-btn-hover 100ms ease-in forwards;
+}
+
 #get-latest-v,
 #clear-latest-dashboard {
   display: inline;
@@ -346,6 +362,11 @@
   background: #006fe8;
   border: 2px solid #006fe8;
   border-radius: 8px;
+}
+
+#get-latest-v:hover,
+#clear-latest-dashboard:hover {
+  animation: secondary-btn-hover 100ms ease-in forwards;
 }
 
 .latest-form {
@@ -447,6 +468,11 @@
   border-radius: 8px;
 }
 
+#clear-historical-input:hover,
+#clear-historical-between-input:hover {
+  animation: main-btn-hover 100ms ease-in forwards;
+}
+
 #get-historical,
 #get-historical-between,
 #clear-historical-dashboard,
@@ -470,6 +496,13 @@
   border-radius: 8px;
 }
 
+#get-historical:hover,
+#get-historical-between:hover,
+#clear-historical-dashboard:hover,
+#clear-historical-between-dashboard:hover {
+  animation: secondary-btn-hover 100ms ease-in forwards;
+}
+
 #invert-between-values {
   display: flex;
   justify-content: center;
@@ -479,6 +512,7 @@
   width: 3rem;
   height: 3rem;
   border: 1px solid #dddddd;
+  cursor: pointer;
 }
 
 .history-form,
@@ -505,6 +539,25 @@
   border-radius: 5px;
   padding: 2%;
   border: 1px solid #dddddd;
+}
+
+@keyframes main-btn-hover {
+  0% {
+    color: #006fe8;
+    background: none;
+  }
+  100% {
+    color: #fff;
+    background: #006fe8;
+  }
+}
+@keyframes secondary-btn-hover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

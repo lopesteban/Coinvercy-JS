@@ -63,12 +63,23 @@
 #clear-historical-between-input {
   @include m.main-button;
 }
+#clear-historical-input:hover,
+#clear-historical-between-input:hover {
+  animation: main-btn-hover 100ms ease-in forwards;
+}
 
 #get-historical,
 #get-historical-between,
 #clear-historical-dashboard,
 #clear-historical-between-dashboard {
   @include m.second-button;
+}
+
+#get-historical:hover,
+#get-historical-between:hover,
+#clear-historical-dashboard:hover,
+#clear-historical-between-dashboard:hover {
+  animation: secondary-btn-hover 100ms ease-in forwards;
 }
 
 #invert-between-values {
@@ -80,6 +91,7 @@
   width: 3rem;
   height: 3rem;
   border: 1px solid rgb(221, 221, 221);
+  cursor: pointer;
 }
 
 //FORMS
