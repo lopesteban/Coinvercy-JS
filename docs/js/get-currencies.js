@@ -13,7 +13,7 @@ const fetchingCurrencies = () => {
       for (const currency in currencies) {
         let $div = d.createElement("div");
         $div.classList.add("currency-card");
-        $div.innerHTML = `<img class="flag-icon" src="./assets/${currency}.png"><p><strong>${currency}</strong> - ${currencies[currency]}</p>`;
+        $div.innerHTML = `<img class="flag-icon" src="./assets/${currency}.png"> <p><strong>${currency}</strong> - ${currencies[currency]}</p>`;
         $fragment.appendChild($div);
       }
       $currenciesListContent.appendChild($fragment);
