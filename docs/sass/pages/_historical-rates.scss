@@ -17,6 +17,8 @@
   flex-flow: column;
   align-items: center;
   border-right: double c.$main-bg;
+  padding: 2% 0;
+  gap: 2rem;
 
   h3 {
     text-align: center;
@@ -29,6 +31,8 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  padding: 2% 0;
+  gap: 2rem;
 
   h3 {
     text-align: center;
@@ -37,15 +41,40 @@
 }
 
 //BUTTON STYLE
-#get-historical,
 #clear-historical-input,
-#get-historical-between,
-#invert-between-values,
 #clear-historical-between-input {
   @include m.main-button;
 }
 
+#get-historical,
+#get-historical-between,
 #clear-historical-dashboard,
 #clear-historical-between-dashboard {
   @include m.second-button;
+}
+
+#invert-between-values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: c.$button-border;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgb(221, 221, 221);
+}
+
+//FORMS
+.history-form,
+.history-between {
+  @include m.form-style(80%);
+}
+
+[data-historical],
+[data-historical-between] {
+  width: 90%;
+  box-shadow: rgba(0, 17, 51, 5%) 0px 3px 15px;
+  border-radius: 5px;
+  padding: 2%;
+  border: 1px solid rgb(221, 221, 221);
 }

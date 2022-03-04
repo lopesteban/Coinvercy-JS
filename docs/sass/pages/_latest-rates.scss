@@ -5,16 +5,28 @@
   @include m.card-container(90%, rgba(35, 55, 80, 30%) 0 6px 12px);
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 0 0 2%;
 }
 
 //BUTTONS STYLE
-#get-latest-v,
 #clear-latest-inputs {
   @include m.main-button;
 }
 
+#get-latest-v,
 #clear-latest-dashboard {
   @include m.second-button;
+}
+
+//FORM STYLE
+
+.latest-form {
+  @include m.form-style(50%);
+  padding: 2% 0;
+
+  label {
+    margin-bottom: 0;
+  }
 }

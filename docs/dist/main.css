@@ -186,8 +186,10 @@
   border-radius: 5px;
   border: 1px solid #dddddd;
   padding: 2%;
-  overflow: hidden;
   width: 90%;
+}
+.currency-form option {
+  padding: 2%;
 }
 
 #amount {
@@ -199,7 +201,6 @@
 }
 
 #get-currencies,
-#invert-values,
 #clear-converter-inputs {
   display: inline;
   -webkit-box-pack: center;
@@ -266,11 +267,11 @@
   background-color: #fff;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 0 0 2%;
 }
 
-#get-latest-v,
 #clear-latest-inputs {
   display: inline;
   -webkit-box-pack: center;
@@ -291,6 +292,7 @@
   border-radius: 8px;
 }
 
+#get-latest-v,
 #clear-latest-dashboard {
   display: inline;
   -webkit-box-pack: center;
@@ -309,6 +311,28 @@
   background: #006fe8;
   border: 2px solid #006fe8;
   border-radius: 8px;
+}
+
+.latest-form {
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-weight: 500;
+  padding: 2% 0;
+}
+.latest-form select {
+  box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  padding: 2%;
+  width: 90%;
+}
+.latest-form option {
+  padding: 2%;
+}
+.latest-form label {
+  margin-bottom: 0;
 }
 
 .historical-rates-container {
@@ -331,6 +355,8 @@
   flex-flow: column;
   align-items: center;
   border-right: double #0a146e;
+  padding: 2% 0;
+  gap: 2rem;
 }
 .historical-rates h3 {
   text-align: center;
@@ -342,16 +368,15 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  padding: 2% 0;
+  gap: 2rem;
 }
 .historical-rates-between h3 {
   text-align: center;
   width: 100%;
 }
 
-#get-historical,
 #clear-historical-input,
-#get-historical-between,
-#invert-between-values,
 #clear-historical-between-input {
   display: inline;
   -webkit-box-pack: center;
@@ -372,6 +397,8 @@
   border-radius: 8px;
 }
 
+#get-historical,
+#get-historical-between,
 #clear-historical-dashboard,
 #clear-historical-between-dashboard {
   display: inline;
@@ -391,6 +418,47 @@
   background: #006fe8;
   border: 2px solid #006fe8;
   border-radius: 8px;
+}
+
+#invert-between-values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #006fe8;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #dddddd;
+}
+
+.history-form,
+.history-between {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-weight: 500;
+}
+.history-form select,
+.history-between select {
+  box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  padding: 2%;
+  width: 90%;
+}
+.history-form option,
+.history-between option {
+  padding: 2%;
+}
+
+[data-historical],
+[data-historical-between] {
+  width: 90%;
+  box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+  border-radius: 5px;
+  padding: 2%;
+  border: 1px solid #dddddd;
 }
 
 /*# sourceMappingURL=main.css.map */
