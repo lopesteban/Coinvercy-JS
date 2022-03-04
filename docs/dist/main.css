@@ -140,6 +140,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  overflow: hidden;
 }
 .converter-container h3 {
   color: #0a146e;
@@ -158,6 +159,34 @@
 .see-currencies h3 {
   text-align: center;
   width: 100%;
+}
+
+.display-currencies-section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.users-section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.currency-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 3rem;
+  box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+  border-radius: 5px;
+  padding: 2%;
+  border: 1px solid #dddddd;
 }
 
 .convert-currencies {
@@ -187,9 +216,6 @@
   border: 1px solid #dddddd;
   padding: 2%;
   width: 90%;
-}
-.currency-form option {
-  padding: 2%;
 }
 
 #amount {
@@ -328,9 +354,6 @@
   padding: 2%;
   width: 90%;
 }
-.latest-form option {
-  padding: 2%;
-}
 .latest-form label {
   margin-bottom: 0;
 }
@@ -446,10 +469,6 @@
   border: 1px solid #dddddd;
   padding: 2%;
   width: 90%;
-}
-.history-form option,
-.history-between option {
-  padding: 2%;
 }
 
 [data-historical],

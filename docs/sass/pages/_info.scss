@@ -2,7 +2,7 @@
 @use "../utils/mixins" as m;
 
 .info-container {
-  @include m.card-container(70%, 0px 2px 4px 2px rgba(0, 0, 0, 10%));
+  @include m.card-container(70%, 0px 2px 4px 2px rgba(0, 0, 0, 10%), auto);
   h3,
   h4 {
     margin: 1% 4%;

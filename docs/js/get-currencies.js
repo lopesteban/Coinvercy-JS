@@ -11,9 +11,9 @@ const fetchingCurrencies = () => {
     .then((res) => (res.ok ? res.json() : Promise.reject(res)))
     .then((currencies) => {
       for (const currency in currencies) {
-        let $div = d.createElement("div"),
-          $divContent = `<div class="currency-link" value="${currency}" >Currency: <strong>${currencies[currency]}</strong> - Acronym: <strong>${currency}</strong></div><hr>`;
-        $div.insertAdjacentHTML("afterbegin", $divContent);
+        let $div = d.createElement("div");
+        $div.classList.add("currency-card");
+        $div.innerHTML = `<img class="flag-icon" src="./assets/${currency}.png"><p><strong>${currency}</strong> - ${currencies[currency]}</p>`;
         $fragment.appendChild($div);
       }
       $currenciesListContent.appendChild($fragment);
@@ -51,9 +51,9 @@ const converting = () => {
         .then((resp) => (resp.ok ? resp.json() : Promise.reject(resp)))
         .then((data) => {
           $sectionContent.innerHTML = null;
-          let $div = d.createElement("div"),
-            $divContent = `<p>${$amount} ${$from} is equal to ${data.rates[$to]} ${$to}</p>`;
-          $div.insertAdjacentHTML("afterbegin", $divContent);
+          let $div = d.createElement("div");
+          $div.classList.add("currency-card");
+          $div.innerHTML = `<img class="flag-icon" src="./assets/${$from}.png"> <p><strong>${$amount} ${$from}</strong> is equal to <strong>${data.rates[$to]} ${$to}</strong></p> <img class="flag-icon" src="./assets/${$to}.png">`;
           $sectionContent.appendChild($div);
           const $clearConvercyBtn = d.createElement("button");
           $clearConvercyBtn.id = "clear-converter-dashboard";

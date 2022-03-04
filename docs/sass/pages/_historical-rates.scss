@@ -2,7 +2,7 @@
 @use "../themes/colours" as c;
 
 .historical-rates-container {
-  @include m.card-container(90%, rgba(35, 55, 80, 30%) 0 6px 12px);
+  @include m.card-container(90%, rgba(35, 55, 80, 30%) 0 6px 12px, auto);
   display: flex;
   flex-flow: row wrap;
 

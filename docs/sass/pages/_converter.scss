@@ -2,10 +2,11 @@
 @use "../themes/colours" as c;
 
 .converter-container {
-  @include m.card-container(90%, rgba(35, 55, 80, 30%) 0 6px 12px);
+  @include m.card-container(90%, rgba(35, 55, 80, 30%) 0 6px 12px, auto);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  overflow: hidden;
 
   h3 {
     color: c.$main-bg;
@@ -26,6 +27,34 @@
     text-align: center;
     width: 100%;
   }
+}
+
+.display-currencies-section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.users-section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.currency-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 3rem;
+  box-shadow: rgba(0, 17, 51, 5%) 0px 3px 15px;
+  border-radius: 5px;
+  padding: 2%;
+  border: 1px solid rgb(221, 221, 221);
 }
 
 .convert-currencies {
