@@ -13,4 +13,40 @@
       margin: 1% 2.5%;
     }
   }
+
+  .see-currencies,
+  .convert-currencies {
+    width: 100%;
+  }
+
+  .convert-currencies {
+    order: 1;
+  }
+  .see-currencies {
+    order: 2;
+  }
+
+  .historical-rates,
+  .historical-rates-between {
+    width: 100%;
+  }
+
+  .historical-rates {
+    order: 2;
+  }
+
+  .historical-rates-between {
+    order: 1;
+  }
+}
+
+//SECOND BREAKPOINT
+
+@media (max-width: 700px) {
+  .navbar {
+    a:link,
+    a:visited {
+      font-size: 1rem;
+    }
+  }
 }
