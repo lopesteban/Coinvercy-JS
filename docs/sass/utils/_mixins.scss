@@ -7,6 +7,8 @@
   border-radius: 8px;
   box-shadow: $shadow;
   background-color: c.$main-font-color;
+  display: flex;
+  flex-flow: column;
 }
 
 //BUTTONS

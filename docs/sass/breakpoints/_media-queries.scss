@@ -1,0 +1,16 @@
+@use "../themes/colours" as c;
+@use "../utils/mixins" as m;
+
+//850 px FIRST BREAKPOINT
+@media (max-width: 850px) {
+  //info section
+  .info-container {
+    h3,
+    h4 {
+      margin: 3% 2% 0.5%;
+    }
+    p {
+      margin: 1% 2.5%;
+    }
+  }
+}
