@@ -71,6 +71,7 @@
       justify-content: center;
     }
     .hamburger {
+      display: inline-flex;
       visibility: visible;
       width: 10%;
       -ms-flex-item-align: center;
