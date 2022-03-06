@@ -675,6 +675,17 @@
   .footer .hamburger i {
     font-size: 1.5rem;
   }
+
+  .currency-card {
+    gap: 0.5rem;
+  }
+  .currency-card p {
+    font-size: 10px;
+  }
+  .currency-card img {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
