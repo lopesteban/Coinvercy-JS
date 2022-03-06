@@ -1,0 +1,28 @@
+@use "../themes/colours" as c;
+
+.hidden-menu {
+  position: fixed; //No es position relative!!
+  z-index: 2;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translate(-100%, 0);
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: c.$main-font-color;
+    font-size: 1.2rem;
+  }
+
+  a:hover {
+    color: c.$button-border;
+  }
+}

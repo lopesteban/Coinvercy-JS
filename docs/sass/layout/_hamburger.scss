@@ -1,0 +1,6 @@
+@use "../themes/colours" as c;
+
+.hamburger {
+  visibility: hidden;
+  color: c.$main-font-color;
+}

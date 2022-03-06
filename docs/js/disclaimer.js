@@ -1,10 +1,10 @@
 //IMPORTS
-import { d, sections } from "./elements.js";
+import { d, sections, hiddenMenuLinks } from "./elements.js";
 
 export const clickingDisclaimer = () => {
   d.addEventListener("click", (e) => {
     let target = e.target;
-    if (target.matches("#disclaimer")) {
+    if (target.matches("#disclaimer") || target === hiddenMenuLinks[4]) {
       e.preventDefault();
 
       for (let i = 0; i < sections.length; i++) {

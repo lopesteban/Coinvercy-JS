@@ -1,5 +1,5 @@
 //IMPORTS
-import { d, navBarLink, sections } from "./elements.js";
+import { d, navBarLink, sections, hiddenMenuLinks } from "./elements.js";
 
 const $sectionContent = d.querySelector(".latest-section"),
   $fragment = d.createDocumentFragment(),
@@ -56,7 +56,7 @@ const fetchingLatest = () => {
 export const clickingLatest = () => {
   d.addEventListener("click", (e) => {
     let target = e.target;
-    if (target === navBarLink[2] || target.matches("#latest")) {
+    if (target === navBarLink[2] || target === hiddenMenuLinks[2]) {
       e.preventDefault();
       for (let i = 0; i < navBarLink.length; i++) {
         if (i === 2) {

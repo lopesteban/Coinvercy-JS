@@ -50,3 +50,36 @@
     }
   }
 }
+
+//THIRD BREAKPOINT
+@media (max-width: 600px) {
+  .header {
+    justify-content: center;
+
+    .page-title {
+      font-size: 1.5rem;
+    }
+  }
+  .navbar {
+    display: none;
+  }
+  .footer {
+    height: 2.5rem;
+
+    .foot-link {
+      display: none;
+      justify-content: center;
+    }
+    .hamburger {
+      visibility: visible;
+      width: 10%;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

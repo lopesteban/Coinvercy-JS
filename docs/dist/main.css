@@ -132,6 +132,36 @@
   border: 1px solid #dddddd;
 }
 
+.hidden-menu {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translate(-100%, 0);
+}
+.hidden-menu a:link,
+.hidden-menu a:visited {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.hidden-menu a:hover {
+  color: #006fe8;
+}
+
+.hamburger {
+  visibility: hidden;
+  color: #fff;
+}
+
 .info-container {
   width: 90%;
   height: auto;
@@ -612,6 +642,36 @@
   .navbar a:link,
 .navbar a:visited {
     font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    justify-content: center;
+  }
+  .header .page-title {
+    font-size: 1.5rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .footer {
+    height: 2.5rem;
+  }
+  .footer .foot-link {
+    display: none;
+    justify-content: center;
+  }
+  .footer .hamburger {
+    visibility: visible;
+    width: 10%;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+  .footer .hamburger i {
+    font-size: 1.5rem;
   }
 }
 

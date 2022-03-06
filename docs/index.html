@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./dist/main.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script
+      src="https://kit.fontawesome.com/fb5fc5f301.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +17,19 @@
     <title>Coinvercy</title>
   </head>
   <body class="body">
+    <aside class="hidden-menu">
+      <a class="hidden-link" href="#">Info</a>
+      <a class="hidden-link" href="#">Converter</a>
+      <a class="hidden-link" href="#">Latest rates</a>
+      <a class="hidden-link" href="#">Historical rates</a>
+      <a class="hidden-link" href="#">Disclaimer</a>
+      <a
+        href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+        target="_blank"
+        >European Central Bank</a
+      >
+      <a href="https://www.frankfurter.app/" target="_blank">API</a>
+    </aside>
     <header class="header">
       <h1 class="page-title">Coinvercy</h1>
       <nav class="navbar">
@@ -419,13 +440,14 @@
       </div>
     </section>
     <footer class="footer">
-      <a id="disclaimer" href="#">Disclaimer</a>
-      <a
+      <a class="foot-link" id="disclaimer" href="#">Disclaimer</a>
+      <a class="foot-link"
         href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
         target="_blank"
         >European Central Bank</a
       >
-      <a href="https://www.frankfurter.app/" target="_blank">API</a>
+      <a  class="foot-link" href="https://www.frankfurter.app/" target="_blank">API</a>
+      <a class="hamburger" href="#"><i class="fas fa-bars"></i></a>
     </footer>
     <script src="./js/main.js" type="module"></script>
   </body>

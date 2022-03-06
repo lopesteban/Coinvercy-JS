@@ -1,4 +1,4 @@
-import { d, navBarLink, sections } from "./elements.js";
+import { d, navBarLink, sections, hiddenMenuLinks } from "./elements.js";
 
 const $historicalBetweenSection = d.querySelector(
     ".display-historical-rate-between"
@@ -114,7 +114,7 @@ const getHistoricalBetween = () => {
 export const clickingHistorical = () => {
   d.addEventListener("click", (e) => {
     let target = e.target;
-    if (target === navBarLink[3]) {
+    if (target === navBarLink[3] || target === hiddenMenuLinks[3]) {
       e.preventDefault();
       for (let i = 0; i < navBarLink.length; i++) {
         if (i === 3) {

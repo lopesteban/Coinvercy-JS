@@ -1,5 +1,5 @@
 //IMPORTS
-import { d, navBarLink, sections } from "./elements.js";
+import { d, navBarLink, sections, hiddenMenuLinks } from "./elements.js";
 
 const $sectionContent = d.querySelector(".users-section"),
   $currenciesListContent = d.querySelector(".display-currencies-section"),
@@ -82,7 +82,7 @@ export const clickingCurrencies = () => {
   d.addEventListener("click", (e) => {
     let $buttons = d.querySelectorAll("button"),
       target = e.target;
-    if (target === navBarLink[1]) {
+    if (target === navBarLink[1] || target === hiddenMenuLinks[1]) {
       e.preventDefault();
       for (let i = 0; i < navBarLink.length; i++) {
         if (i === 1) {
