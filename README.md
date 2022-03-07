@@ -24,7 +24,7 @@
 
 ### Historical rates section
 
-#### In this section you can check different currencies historical rates and compare them. In order for the converter to work you must insert an specific date in the date inputs (day, month and year). Historical rates section works with rates for any working day since 4 January 1999.
+#### In this section you can check different currencies historical rates and compare them. In order for the converter to work you must insert a specific date in the date inputs (day, month and year). Historical rates section works with rates for any working day since 4 January 1999.
 
 #### This section consist in two sub-sections
 
@@ -34,4 +34,4 @@
 
 ### API
 
-#### Coinvercy uses data provided by #Frankfurter API. For more innformation go to "https://www.frankfurter.app/".
+#### Coinvercy uses data provided by #Frankfurter API. For more innformation go to https://www.frankfurter.app/.
