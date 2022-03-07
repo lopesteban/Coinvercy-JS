@@ -56,7 +56,11 @@ const fetchingLatest = () => {
 export const clickingLatest = () => {
   d.addEventListener("click", (e) => {
     let target = e.target;
-    if (target === navBarLink[2] || target === hiddenMenuLinks[2]) {
+    if (
+      target === navBarLink[2] ||
+      target === hiddenMenuLinks[2] ||
+      target.matches("#latest")
+    ) {
       e.preventDefault();
       for (let i = 0; i < navBarLink.length; i++) {
         if (i === 2) {
