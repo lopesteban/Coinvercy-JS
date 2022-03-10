@@ -24,6 +24,7 @@
   }
   .see-currencies {
     order: 2;
+    border: none;
   }
 
   .historical-rates,
@@ -33,6 +34,7 @@
 
   .historical-rates {
     order: 2;
+    border: none;
   }
 
   .historical-rates-between {
@@ -93,10 +95,5 @@
       width: 16px;
       height: 16px;
     }
-  }
-
-  .see-currencies,
-  .historical-rates {
-    border: none;
   }
 }
