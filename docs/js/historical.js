@@ -21,9 +21,9 @@ const getHistorical = () => {
       e.preventDefault();
 
       let $from = target.from.value;
-      let $day = target.day.value,
-        $month = target.month.value,
-        $year = target.year.value;
+      let $day = target.date.value.substring(8, 10),
+        $month = target.date.value.substring(5, 7),
+        $year = target.date.value.substring(0, 4);
 
       fetch(
         `https://api.frankfurter.app/${$year}-${$month}-${$day}?from=${$from}`
@@ -70,9 +70,10 @@ const getHistoricalBetween = () => {
 
       let $from = target.fromB.value,
         $to = target.toB.value,
-        $day = target.dayB.value,
-        $month = target.monthB.value,
-        $year = target.yearB.value;
+        $day = target.dateB.value.substring(8, 10),
+        $month = target.dateB.value.substring(5, 7),
+        $year = target.dateB.value.substring(0, 4);
+
       fetch(
         `https://api.frankfurter.app/${$year}-${$month}-${$day}?from=${$from}&to=${$to}`
       )

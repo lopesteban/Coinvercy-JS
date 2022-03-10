@@ -686,6 +686,11 @@
     width: 16px;
     height: 16px;
   }
+
+  .see-currencies,
+.historical-rates {
+    border: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
